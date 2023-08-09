@@ -1,47 +1,47 @@
 locals {
-  a = ["Valentina", "Ander", "Olivia", "Sam"]
-  b = ["Y", "M", "C", "A"]
-  c = "1wd13s12e1wd1"
-  d = "Ooo baby I hate the way"
-  e = "One, Two, Three"
-  f = "Tremendous"
-  g = "reverse"
-  h = "goodbye"
-  i = "foobar"
+  string_a = ["Valentina", "Ander", "Olivia", "Sam"]
+  string_b = ["Y", "M", "C", "A"]
+  string_c = "1wd13s12e1wd1"
+  string_d = "Ooo baby I hate the way"
+  string_e = "One, Two, Three"
+  string_f = "Tremendous"
+  string_g = "reverse"
+  string_h = "goodbye"
+  string_i = "foobar"
 }
 
 output "format_list" {
-  value = formatlist("Hello, %s!", local.a)
+  value = formatlist("Hello, %s!", local.string_a)
 }
 
 output "join" {
-  value = join("", local.b)
+  value = join("", local.string_b)
 }
 
 output "regex" {
-  value = regex("[[:lower:]]+", local.c)
+  value = regex("[[:lower:]]+", local.string_c)
 }
 
 output "replace" {
-  value = replace(local.d, "hate", "love")
+  value = replace(local.string_d, "hate", "love")
 }
 
 output "split" {
-  value = split(", ", local.e)
+  value = split(", ", local.string_e)
 }
 
 output "str_contains" {
-  value = strcontains(local.f, "end")
+  value = strcontains(local.string_f, "end")
 }
 
 output "str_reverse" {
-  value = strrev(local.g)
+  value = strrev(local.string_g)
 }
 
 output "substring" {
-  value = substr(local.g, 0, 3)
+  value = substr(local.string_h, 0, 3)
 }
 
 output "trim" {
-  value = trim(local.i, "far")
+  value = trim(local.string_i, "far")
 }

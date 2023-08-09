@@ -1,22 +1,22 @@
 locals {
-  a = -12.4
-  b = 5.1
-  c = [12, 54, 3]
-  d = tuple(3, 2)
+  num_a = -12.4
+  num_b = 5.1
+  num_c = 24
+  num_d = 3
 }
 
 output "absolute" {
-  value = abs(local.a)
+  value = abs(local.num_a)
 }
 
 output "ceiling" {
-  value = ceil(local.b)
+  value = ceil(local.num_b)
 }
 
 output "max" {
-  value = max(local.c)
+  value = max(local.num_c, 15, 51)
 }
 
 output "power" {
-  value = pow(local.d)
+  value = pow(local.num_d, 2)
 }
